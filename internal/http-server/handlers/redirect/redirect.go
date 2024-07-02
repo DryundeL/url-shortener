@@ -16,6 +16,7 @@ type UrlGetter interface {
 	GetURL(alias string) (string, error)
 }
 
+//go:generate go run github.com/vektra/mockery/v2@v2.28.2 --name=UrlGetter
 func New(log *slog.Logger, urlGetter UrlGetter) http.HandlerFunc {
 	return func(w http.ResponseWriter, r *http.Request) {
 		const op = "handlers.url.redirect.New"
