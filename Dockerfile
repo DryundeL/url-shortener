@@ -25,6 +25,8 @@ FROM alpine:latest
 # Устанавливаем временную зону и настройки локали (опционально)
 RUN apk add --no-cache tzdata
 
+RUN mkdir -p /usr/local/bin/storage/db
+
 # Устанавливаем переменные окружения
 ENV APP_ENV=production
 ENV CONFIG_PATH=/usr/local/bin/config/local.yaml
