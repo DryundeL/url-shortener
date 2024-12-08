@@ -1,5 +1,5 @@
 # Шаг 1: Используем официальный образ Go версии 1.21 для сборки приложения
-FROM golang:1.21-alpine AS build
+FROM golang:1.22-alpine AS build
 
 # Устанавливаем необходимые пакеты для работы с CGO и SQLite
 RUN apk add --no-cache gcc musl-dev sqlite-dev
